@@ -181,173 +181,146 @@
         box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
       }
 
-      /* Content Section */
-      .content-section {
-        padding: 5rem 0;
+      /* About Section - Image First */
+      .about-section {
+        padding: 4rem 0;
       }
 
-      .content-section h2 {
+      .about-section h2 {
         font-size: 2.75rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         color: #1a1410;
         font-weight: 700;
         letter-spacing: 0.5px;
       }
 
-      /* Quick Summary */
-      .quick-summary {
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.04));
-        border-left: 4px solid #d4af37;
-        padding: 2rem;
-        border-radius: 0.5rem;
+      /* Image Gallery Slider */
+      .image-gallery {
         margin-bottom: 3rem;
       }
 
-      .quick-summary h3 {
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-        color: #d4af37;
-        font-weight: 700;
+      .gallery-slider {
+        position: relative;
+        width: 100%;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
       }
 
-      .quick-list {
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
+      .gallery-slide {
+        display: none;
+        width: 100%;
       }
 
-      @media (min-width: 768px) {
-        .quick-list {
-          grid-template-columns: 1fr 1fr;
+      .gallery-slide.active {
+        display: block;
+      }
+
+      .gallery-slide img {
+        width: 100%;
+        height: 28rem;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .gallery-slide img {
+          height: 20rem;
         }
       }
 
-      .quick-list li {
-        font-size: 1rem;
-        color: #2a2520;
-        font-weight: 500;
+      .gallery-controls {
         display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        letter-spacing: 0.2px;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
       }
 
-      .quick-list li:before {
-        content: "●";
-        color: #d4af37;
-        font-size: 0.75rem;
+      .gallery-dot {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.3);
+        cursor: pointer;
+        transition: all 0.3s;
       }
 
-      /* Content Blocks */
-      .content-block {
-        margin-bottom: 3.5rem;
+      .gallery-dot.active {
+        background: #d4af37;
+        width: 2rem;
+        border-radius: 0.375rem;
       }
 
-      .content-block h3 {
+      .gallery-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
         font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-        color: #1a1410;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
+        transition: all 0.3s;
+        z-index: 10;
       }
 
-      .content-block p {
-        font-size: 1.0625rem;
-        margin-bottom: 1.25rem;
-        color: rgba(42, 37, 32, 0.8);
-        line-height: 1.8;
-        letter-spacing: 0.3px;
+      .gallery-nav:hover {
+        background: rgba(0, 0, 0, 0.5);
       }
 
-      .highlight {
+      .gallery-prev {
+        left: 1rem;
+      }
+
+      .gallery-next {
+        right: 1rem;
+      }
+
+      /* Quick Info Box */
+      .quick-info {
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+        border: 2px solid #d4af37;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .quick-info h3 {
+        font-size: 1.75rem;
         color: #d4af37;
+        margin-bottom: 1.5rem;
         font-weight: 700;
       }
 
-      .feature-grid {
+      .info-row {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
-        margin: 2rem 0;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
       }
 
       @media (min-width: 768px) {
-        .feature-grid {
+        .info-row {
           grid-template-columns: repeat(2, 1fr);
         }
       }
 
-      .feature-item {
-        background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
-        padding: 1.25rem;
-        border-left: 3px solid #d4af37;
-        border-radius: 0.35rem;
+      .info-item {
+        text-align: center;
       }
 
-      .feature-item strong {
-        color: #d4af37;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 0.35rem;
+      .info-label {
+        font-size: 0.95rem;
+        color: rgba(42, 37, 32, 0.6);
+        margin-bottom: 0.5rem;
+        font-weight: 500;
       }
 
-      .feature-item p {
-        font-size: 1rem;
-        color: rgba(42, 37, 32, 0.75);
-        margin: 0;
-      }
-
-      /* Expandable Section */
-      .expandable {
-        background: #f5f3ed;
-        padding: 2rem;
-        border-radius: 0.5rem;
-        margin: 2rem 0;
-      }
-
-      .expandable-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        user-select: none;
-      }
-
-      .expandable-header h4 {
-        font-size: 1.125rem;
-        color: #1a1410;
-        font-weight: 700;
-        margin: 0;
-      }
-
-      .expandable-toggle {
+      .info-value {
         font-size: 1.5rem;
         color: #d4af37;
-        transition: transform 0.3s;
-      }
-
-      .expandable-toggle.open {
-        transform: rotate(180deg);
-      }
-
-      .expandable-content {
-        display: none;
-        margin-top: 1.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(212, 175, 55, 0.2);
-      }
-
-      .expandable-content.open {
-        display: block;
-      }
-
-      .expandable-content p {
-        font-size: 1rem;
-        line-height: 1.8;
-        margin-bottom: 1rem;
+        font-weight: 700;
       }
 
       /* Services Section */
@@ -513,6 +486,80 @@
         line-height: 1.8;
       }
 
+      /* SEO Text Section */
+      .seo-content {
+        padding: 4rem 0;
+        background: #f5f3ed;
+        margin-top: 4rem;
+      }
+
+      .seo-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        color: #2a2520;
+        font-weight: 700;
+      }
+
+      .accordion {
+        margin-bottom: 1.5rem;
+      }
+
+      .accordion-header {
+        background: linear-gradient(to right, rgba(212, 175, 55, 0.08), transparent);
+        border-left: 3px solid #d4af37;
+        padding: 1.25rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.35rem;
+        transition: all 0.3s;
+      }
+
+      .accordion-header:hover {
+        background: linear-gradient(to right, rgba(212, 175, 55, 0.12), transparent);
+      }
+
+      .accordion-header h4 {
+        font-size: 1rem;
+        color: #2a2520;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .accordion-toggle {
+        font-size: 1.25rem;
+        color: #d4af37;
+        transition: transform 0.3s;
+      }
+
+      .accordion-toggle.open {
+        transform: rotate(180deg);
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 1.5rem;
+        background: #ffffff;
+        border-left: 3px solid rgba(212, 175, 55, 0.3);
+        margin-left: 0;
+        font-size: 0.9375rem;
+        color: rgba(42, 37, 32, 0.75);
+        line-height: 1.7;
+      }
+
+      .accordion-content.open {
+        display: block;
+      }
+
+      .accordion-content p {
+        margin-bottom: 1rem;
+      }
+
+      .accordion-content p:last-child {
+        margin-bottom: 0;
+      }
+
       /* Footer */
       footer {
         background: #2a2520;
@@ -549,29 +596,22 @@
           font-size: 2rem;
         }
 
-        .content-section h2 {
+        .about-section h2 {
           font-size: 2rem;
-        }
-
-        .content-block h3 {
-          font-size: 1.25rem;
-        }
-
-        .quick-summary {
-          padding: 1.5rem;
-        }
-
-        .feature-item {
-          padding: 1rem;
-        }
-
-        .service-card {
-          padding: 1.75rem;
         }
 
         nav a {
           margin-left: 1rem;
           font-size: 0.8rem;
+        }
+
+        .quick-info {
+          padding: 1.5rem;
+        }
+
+        .gallery-nav {
+          padding: 0.75rem;
+          font-size: 1.25rem;
         }
       }
     </style>
@@ -611,107 +651,121 @@
 
     <div class="divider-line"></div>
 
-    <!-- Main Content Section -->
-    <section class="content-section" id="about">
+    <!-- About Section - Image First -->
+    <section class="about-section" id="about">
       <div class="container">
-        <h2>강서셔츠룸이 특별한 이유</h2>
-        
-        <!-- Quick Summary -->
-        <div class="quick-summary">
-          <h3>✨ 핵심 특징</h3>
-          <ul class="quick-list">
-            <li><span class="highlight">최신 4K 음향 시스템</span></li>
-            <li><span class="highlight">프리미엄 매니저 20명 이상</span></li>
-            <li><span class="highlight">대리석 인테리어</span></li>
-            <li><span class="highlight">24시간 운영</span></li>
-            <li><span class="highlight">전국 최저가</span></li>
-            <li><span class="highlight">강서구 최고 가성비</span></li>
-          </ul>
-        </div>
+        <h2>강서셔츠룸 시설 소개</h2>
 
-        <!-- Content Block 1 -->
-        <div class="content-block">
-          <h3>🎤 강서가라오케의 최신 시스템</h3>
-          <p>저희 강서셔츠룸은 강서유흥 문화의 중심입니다. 마곡, 화곡, 발산역 근처에서 가장 현대적인 시스템과 럭셔리한 인테리어를 갖춘 프리미엄 셔츠룸입니다.</p>
-          
-          <div class="feature-grid">
-            <div class="feature-item">
-              <strong>🎵 최신 곡 라이브러리</strong>
-              <p>매일 업데이트되는 최신 K-POP, 트로트, 팝 등 모든 장르</p>
+        <!-- Image Gallery Slider -->
+        <div class="image-gallery">
+          <div class="gallery-slider">
+            <div class="gallery-slide active">
+              <img src="/vip-room-luxury.png" alt="강서셔츠룸 VIP 프리미엄 룸" />
             </div>
-            <div class="feature-item">
-              <strong>🎬 4K 고화질 디스플레이</strong>
-              <p>프로 스튜디오 수준의 영상 품질 경험</p>
+            <div class="gallery-slide">
+              <img src="/ambiance-luxury.png" alt="강서가라오케 럭셔리 파티 분위기" />
             </div>
-            <div class="feature-item">
-              <strong>🔊 프로 음향 장비</strong>
-              <p>전문 스튜디오 수준의 사운드 시스템</p>
+            <div class="gallery-slide">
+              <img src="/entrance-luxury.png" alt="강서노래방 세련된 입구" />
             </div>
-            <div class="feature-item">
-              <strong>⏰ 24시간 운영</strong>
-              <p>언제든 편하게 방문 가능한 강서노래방</p>
+            <div class="gallery-slide">
+              <img src="/details-luxury.png" alt="강서유흥 프리미엄 디테일" />
             </div>
+            <button class="gallery-nav gallery-prev" onclick="changeSlide(-1)">❮</button>
+            <button class="gallery-nav gallery-next" onclick="changeSlide(1)">❯</button>
+          </div>
+          <div class="gallery-controls">
+            <span class="gallery-dot active" onclick="goToSlide(0)"></span>
+            <span class="gallery-dot" onclick="goToSlide(1)"></span>
+            <span class="gallery-dot" onclick="goToSlide(2)"></span>
+            <span class="gallery-dot" onclick="goToSlide(3)"></span>
           </div>
         </div>
 
-        <!-- Content Block 2 -->
-        <div class="content-block">
-          <h3>👑 강서구 최고의 회식장소</h3>
-          <p>강서구회식장소를 찾으신다면 저희가 최적의 선택입니다. 직장 동료들과의 회식, 친구들과의 모임, 가족 축하 자리 등 모든 종류의 모임에 완벽합니다.</p>
-          
-          <div class="expandable">
-            <div class="expandable-header" onclick="toggleExpand(this)">
-              <h4>강서혼술과 강서시스템주점으로서의 특징</h4>
-              <span class="expandable-toggle">▼</span>
+        <!-- Quick Info Box -->
+        <div class="quick-info">
+          <h3>✨ 강서셔츠룸 정보</h3>
+          <div class="info-row">
+            <div class="info-item">
+              <div class="info-label">📞 예약 문의</div>
+              <div class="info-value">010-3778-6425</div>
             </div>
-            <div class="expandable-content">
-              <p>강서혼술을 즐기시는 분들도 편안한 분위기에서 즐길 수 있도록 배려하고 있습니다. 강서시스템주점으로서의 저희는 최고의 가성비를 자랑합니다. 강서가성비술집 중에서도 가장 합리적인 가격으로 프리미엄한 경험을 제공합니다.</p>
+            <div class="info-item">
+              <div class="info-label">💬 카카오톡</div>
+              <div class="info-value">inhighg</div>
             </div>
           </div>
+          <div class="info-row">
+            <div class="info-item">
+              <div class="info-label">📍 위치</div>
+              <div class="info-value">강서구청 근처</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">🕐 운영시간</div>
+              <div class="info-value">24시간 운영</div>
+            </div>
+          </div>
+          <button class="btn-primary" onclick="window.location.href='tel:010-3778-6425'" style="margin-top: 1.5rem;">지금 바로 예약하기</button>
         </div>
 
-        <!-- Content Block 3 -->
-        <div class="content-block">
-          <h3>📍 마곡셔츠룸, 화곡동노래방, 발산역가라오케</h3>
-          <p>강서구 내에서도 마곡, 화곡, 발산역 지역별로 다양한 강서가라오케와 강서노래방이 있습니다. 저희는 이 모든 지역에서 가장 접근성이 좋으면서도 최고의 시설을 갖추고 있습니다.</p>
-          
-          <div class="expandable">
-            <div class="expandable-header" onclick="toggleExpand(this)">
-              <h4>지역별 특징 및 접근성 정보</h4>
-              <span class="expandable-toggle">▼</span>
+        <!-- SEO Content Section (Collapsed) -->
+        <div class="seo-content">
+          <h3>📖 강서셔츠룸 상세 정보</h3>
+
+          <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h4>강서셔츠룸의 최신 시스템</h4>
+              <span class="accordion-toggle">▼</span>
             </div>
-            <div class="expandable-content">
+            <div class="accordion-content">
+              <p>저희 강서셔츠룸은 강서유흥 문화의 중심입니다. 마곡, 화곡, 발산역 근처에서 가장 현대적인 시스템과 럭셔리한 인테리어를 갖춘 프리미엄 셔츠룸입니다. 강서가라오케, 강서노래방을 찾으시는 분들께 최고의 경험을 제공하기 위해 끊임없이 노력하고 있습니다.</p>
+              <p>최신형 4K 디스플레이와 프로페셔널한 음향 장비로 마치 전문 스튜디오에서 노래하는 것 같은 경험을 제공합니다. 화곡동노래방, 마곡셔츠룸, 발산역가라오케 중에서도 가장 최신의 곡들을 매일 업데이트하여 항상 최신 트렌드를 반영합니다.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h4>강서구 최고의 회식장소 & 강서혼술</h4>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>강서구회식장소를 찾으신다면 저희 강서셔츠룸이 최적의 선택입니다. 직장 동료들과의 회식, 친구들과의 모임, 가족 축하 자리 등 모든 종류의 모임에 완벽한 강서밤문화 공간입니다. 또한 강서혼술을 즐기시는 분들도 편안한 분위기에서 즐길 수 있도록 배려하고 있습니다.</p>
+              <p>강서시스템주점으로서의 저희는 최고의 가성비를 자랑합니다. 강서가성비술집 중에서도 가장 합리적인 가격으로 프리미엄한 경험을 제공합니다. 강서유흥을 즐기고 싶지만 예산이 제한적이신 분들께 강력히 추천드립니다.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h4>마곡셔츠룸, 화곡동노래방, 발산역가라오케</h4>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>강서구 내에서도 마곡, 화곡, 발산역 지역별로 다양한 강서가라오케와 강서노래방이 있습니다. 저희는 이 모든 지역에서 가장 접근성이 좋으면서도 최고의 시설을 갖추고 있습니다.</p>
               <p><strong>마곡셔츠룸:</strong> 마곡지구의 현대적 분위기와 잘 어울리는 저희 시설을 방문해보세요. 서울식물원과 마곡지구 인근으로 최신 시스템을 갖춘 강서가라오케입니다.</p>
               <p><strong>화곡동노래방:</strong> 화곡동의 중심에 위치한 저희가 최고의 선택입니다. 강서노래방 중에서도 가장 접근성이 좋고 프리미엄한 서비스를 제공합니다.</p>
               <p><strong>발산역가라오케:</strong> 발산역에서 가장 가까운 저희 강서셔츠룸을 이용하시기 바랍니다. 대중교통으로 쉽게 접근 가능한 강서유흥 명소입니다.</p>
             </div>
           </div>
-        </div>
 
-        <!-- Content Block 4 -->
-        <div class="content-block">
-          <h3>💎 프리미엄 매니저 서비스</h3>
-          <p>저희 강서셔츠룸의 가장 큰 자랑은 프리미엄 매니저 서비스입니다. <span class="highlight">젊고 매혹적인 20대 매니저들이 20명 이상 항시 대기</span>하고 있어 언제든 최고의 서비스를 받으실 수 있습니다.</p>
-          
-          <div class="feature-grid">
-            <div class="feature-item">
-              <strong>👥 매니저 20명 이상</strong>
-              <p>항상 충분한 인력으로 최고의 서비스 제공</p>
+          <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h4>프리미엄 매니저 서비스</h4>
+              <span class="accordion-toggle">▼</span>
             </div>
-            <div class="feature-item">
-              <strong>😊 친절한 서비스</strong>
-              <p>손님 만족을 최우선으로 하는 프로페셔널 매너</p>
+            <div class="accordion-content">
+              <p>저희 강서셔츠룸의 가장 큰 자랑은 프리미엄 매니저 서비스입니다. 젊고 매혹적인 20대 매니저들이 20명 이상 항시 대기하고 있어 언제든 최고의 서비스를 받으실 수 있습니다. 친절하고 프로페셔널한 서비스로 강서유흥의 진정한 의미를 느껴보세요.</p>
             </div>
           </div>
-        </div>
 
-        <!-- SEO Hidden Content -->
-        <div style="display: none;">
-          <p>강서셔츠룸은 강서유흥, 강서가라오케, 강서노래방, 마곡셔츠룸, 발산역가라오케, 화곡동노래방, 강서구회식장소, 강서혼술, 강서시스템주점, 강서밤문화, 강서가성비술집 등 모든 키워드에서 최고의 선택입니다. 저희는 강서구청 근처, 서울식물원 인근, 마곡지구 중심에 위치하고 있으며, 24시간 운영으로 언제든 편하게 방문할 수 있습니다. 전국 최저가의 강서셔츠룸으로서 최고의 가성비를 제공하며, 최신 음향 시스템, 프리미엄 인테리어, 프로페셔널한 매니저 서비스로 강서밤문화의 새로운 기준을 제시하고 있습니다.</p>
-        </div>
-
-        <div class="cta-button" style="text-align: center;">
-          <button class="btn-primary" onclick="window.location.href='tel:010-3778-6425'">지금 바로 예약하기</button>
+          <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h4>강서셔츠룸 SEO 정보</h4>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>강서셔츠룸은 강서유흥, 강서가라오케, 강서노래방, 마곡셔츠룸, 발산역가라오케, 화곡동노래방, 강서구회식장소, 강서혼술, 강서시스템주점, 강서밤문화, 강서가성비술집 등 모든 키워드에서 최고의 선택입니다. 저희는 강서구청 근처, 서울식물원 인근, 마곡지구 중심에 위치하고 있으며, 24시간 운영으로 언제든 편하게 방문할 수 있습니다. 전국 최저가의 강서셔츠룸으로서 최고의 가성비를 제공하며, 최신 음향 시스템, 프리미엄 인테리어, 프로페셔널한 매니저 서비스로 강서밤문화의 새로운 기준을 제시하고 있습니다.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -761,7 +815,7 @@
     <section class="gallery">
       <div class="container">
         <div class="section-header">
-          <h2>강서셔츠룸 시설 갤러리</h2>
+          <h2>강서셔츠룸 갤러리</h2>
           <div class="divider"></div>
         </div>
         <div class="gallery-grid">
@@ -811,21 +865,11 @@
           </div>
           <div class="info-item">
             <h3>📞 연락처</h3>
-            <p>전화: <span class="highlight">010-3778-6425</span><br />카카오톡: <span class="highlight">inhighg</span><br /><span style="font-size: 0.9rem;">빠른 예약 및 상담</span></p>
+            <p>전화: <span style="color: #d4af37; font-weight: 700;">010-3778-6425</span><br />카카오톡: <span style="color: #d4af37; font-weight: 700;">inhighg</span><br /><span style="font-size: 0.9rem;">빠른 예약 및 상담</span></p>
           </div>
         </div>
 
-        <div style="margin-top: 4rem; padding: 2rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.04)); border-left: 4px solid #d4af37; border-radius: 0.5rem; text-align: center;">
-          <h3 style="color: #d4af37; margin-bottom: 1rem; font-size: 1.25rem;">강서셔츠룸 이용 안내</h3>
-          <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 1rem;">
-            강서유흥, 강서가라오케, 강서노래방, 강서시스템주점, 강서혼술, 강서회식장소, 강서밤문화를 찾으신다면 저희 강서셔츠룸이 최고의 선택입니다.
-          </p>
-          <p style="font-size: 1rem; line-height: 1.8; color: rgba(42, 37, 32, 0.8);">
-            마곡셔츠룸, 화곡동노래방, 발산역가라오케 중에서도 가장 프리미엄한 시설과 서비스를 제공하며, 강서가성비술집 중에서도 가장 합리적인 가격으로 최고의 경험을 선사합니다.
-          </p>
-        </div>
-
-        <div style="text-align: center; margin-top: 2rem;">
+        <div style="text-align: center; margin-top: 3rem;">
           <button class="btn-primary" onclick="window.location.href='tel:010-3778-6425'">지금 바로 예약하기</button>
         </div>
       </div>
@@ -844,8 +888,30 @@
     </footer>
 
     <script>
-      function toggleExpand(header) {
-        const toggle = header.querySelector('.expandable-toggle');
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.gallery-slide');
+      const dots = document.querySelectorAll('.gallery-dot');
+
+      function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[n].classList.add('active');
+        dots[n].classList.add('active');
+      }
+
+      function changeSlide(direction) {
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function goToSlide(n) {
+        currentSlide = n;
+        showSlide(currentSlide);
+      }
+
+      function toggleAccordion(header) {
+        const toggle = header.querySelector('.accordion-toggle');
         const content = header.nextElementSibling;
         
         toggle.classList.toggle('open');
