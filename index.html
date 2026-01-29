@@ -590,6 +590,53 @@
         margin: 2rem 0;
       }
 
+      /* Sticky CTA Button */
+      .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, #d4af37, #e0c158);
+        padding: 1rem;
+        text-align: center;
+        z-index: 40;
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        animation: slideUp 0.4s ease-out;
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      .sticky-cta button {
+        width: 100%;
+        max-width: 400px;
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+        background: #1a1410;
+        color: #d4af37;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        letter-spacing: 0.5px;
+      }
+
+      .sticky-cta button:hover {
+        background: #2a2520;
+        transform: scale(1.02);
+      }
+
+      body.sticky-active {
+        padding-bottom: 80px;
+      }
+
       /* Mobile Optimization */
       @media (max-width: 640px) {
         .hero-text h1 {
@@ -617,6 +664,11 @@
     </style>
   </head>
   <body>
+    <!-- Sticky CTA Button -->
+    <div class="sticky-cta">
+      <button onclick="window.location.href='tel:010-3778-6425'">📞 지금 바로 예약하기</button>
+    </div>
+
     <!-- Navigation -->
     <nav>
       <div class="container">
