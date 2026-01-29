@@ -593,8 +593,9 @@
       /* Sticky CTA Button */
       .sticky-cta {
         position: fixed;
-        bottom: 2rem;
+        top: 50%;
         right: 2rem;
+        transform: translateY(-50%);
         z-index: 40;
         animation: fadeIn 0.4s ease-out;
       }
@@ -611,8 +612,10 @@
       }
 
       .sticky-cta button {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.95rem;
+        width: 5rem;
+        height: 5rem;
+        padding: 0;
+        font-size: 2rem;
         font-weight: 700;
         background: #d4af37;
         color: #1a1410;
@@ -620,26 +623,60 @@
         border-radius: 0.5rem;
         cursor: pointer;
         transition: all 0.3s;
-        letter-spacing: 0.3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25rem;
         box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        white-space: nowrap;
       }
 
       .sticky-cta button:hover {
         background: #c9a227;
-        transform: translateY(-3px);
+        transform: scale(1.1);
         box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
       }
 
-      @media (max-width: 640px) {
+      .sticky-cta .icon {
+        font-size: 2rem;
+      }
+
+      .sticky-cta .text {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        line-height: 1;
+      }
+
+      @media (max-width: 768px) {
         .sticky-cta {
-          bottom: 1rem;
           right: 1rem;
         }
 
         .sticky-cta button {
-          padding: 0.65rem 1.25rem;
-          font-size: 0.85rem;
+          width: 4.5rem;
+          height: 4.5rem;
+          font-size: 1.75rem;
+        }
+
+        .sticky-cta .text {
+          font-size: 0.65rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .sticky-cta {
+          right: 0.75rem;
+        }
+
+        .sticky-cta button {
+          width: 4rem;
+          height: 4rem;
+          font-size: 1.5rem;
+        }
+
+        .sticky-cta .text {
+          font-size: 0.6rem;
         }
       }
 
@@ -672,7 +709,10 @@
   <body>
     <!-- Sticky CTA Button -->
     <div class="sticky-cta">
-      <button onclick="window.location.href='tel:010-3778-6425'">📞 지금 바로 예약하기</button>
+      <button onclick="window.location.href='tel:010-3778-6425'">
+        <span class="icon">🎤</span>
+        <span class="text">예약<br>문의</span>
+      </button>
     </div>
 
     <!-- Navigation -->
