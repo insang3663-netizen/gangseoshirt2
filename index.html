@@ -593,48 +593,54 @@
       /* Sticky CTA Button */
       .sticky-cta {
         position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(to top, #d4af37, #e0c158);
-        padding: 1rem;
-        text-align: center;
+        bottom: 2rem;
+        right: 2rem;
         z-index: 40;
-        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-        animation: slideUp 0.4s ease-out;
+        animation: fadeIn 0.4s ease-out;
       }
 
-      @keyframes slideUp {
+      @keyframes fadeIn {
         from {
-          transform: translateY(100%);
+          opacity: 0;
+          transform: scale(0.8);
         }
         to {
-          transform: translateY(0);
+          opacity: 1;
+          transform: scale(1);
         }
       }
 
       .sticky-cta button {
-        width: 100%;
-        max-width: 400px;
-        padding: 1rem 2rem;
-        font-size: 1.125rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
         font-weight: 700;
-        background: #1a1410;
-        color: #d4af37;
+        background: #d4af37;
+        color: #1a1410;
         border: none;
         border-radius: 0.5rem;
         cursor: pointer;
         transition: all 0.3s;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        white-space: nowrap;
       }
 
       .sticky-cta button:hover {
-        background: #2a2520;
-        transform: scale(1.02);
+        background: #c9a227;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
       }
 
-      body.sticky-active {
-        padding-bottom: 80px;
+      @media (max-width: 640px) {
+        .sticky-cta {
+          bottom: 1rem;
+          right: 1rem;
+        }
+
+        .sticky-cta button {
+          padding: 0.65rem 1.25rem;
+          font-size: 0.85rem;
+        }
       }
 
       /* Mobile Optimization */
