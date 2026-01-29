@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="강서 유흥 셔츠룸 - 럭셔리한 프리미엄 셔츠룸. 최고급 인테리어, 프리미엄 매니저, 최신 음향 시스템. 24시간 운영." />
+    <meta name="keywords" content="셔츠룸, 가라오케, 강서구, 유흥, 프리미엄" />
+    <title>강서 유흥 셔츠룸 - 럭셔리 프리미엄 셔츠룸</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Lato', sans-serif;
+        background: #faf8f3;
+        color: #2a2520;
+        line-height: 1.6;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      @media (min-width: 640px) {
+        .container {
+          padding: 0 1.5rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          padding: 0 2rem;
+        }
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(250, 248, 243, 0.95);
+        backdrop-filter: blur(4px);
+        z-index: 50;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      }
+
+      nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      nav h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #d4af37;
+      }
+
+      nav a {
+        font-size: 0.875rem;
+        margin-left: 2rem;
+        text-decoration: none;
+        color: #2a2520;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #d4af37;
+      }
+
+      /* Hero Section */
+      .hero {
+        margin-top: 4rem;
+        padding: 3rem 0;
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      @media (min-width: 768px) {
+        .hero-content {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .hero-text h2 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .hero-text h2 {
+          font-size: 4rem;
+        }
+      }
+
+      .hero-text p {
+        font-size: 1.125rem;
+        color: rgba(42, 37, 32, 0.7);
+        margin-bottom: 2rem;
+        max-width: 28rem;
+      }
+
+      .button-group {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      button, .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 0.65rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-primary {
+        background: #d4af37;
+        color: #1a1410;
+      }
+
+      .btn-primary:hover {
+        background: #c9a227;
+      }
+
+      .btn-secondary {
+        border: 1px solid #d4af37;
+        color: #d4af37;
+        background: transparent;
+      }
+
+      .btn-secondary:hover {
+        background: rgba(212, 175, 55, 0.1);
+      }
+
+      .hero-image {
+        position: relative;
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: 24rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Services Section */
+      .services {
+        padding: 6rem 0;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-header h3 {
+        font-size: 0.875rem;
+        letter-spacing: 0.1em;
+        color: #d4af37;
+        margin-bottom: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+      }
+
+      .section-header h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .divider {
+        width: 4rem;
+        height: 0.25rem;
+        background: #d4af37;
+        margin: 0 auto;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .services-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .service-card {
+        padding: 2rem;
+        background: linear-gradient(to bottom right, #ffffff, #faf8f3);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 0.65rem;
+        transition: all 0.3s;
+      }
+
+      .service-card:hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: rgba(212, 175, 55, 0.5);
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .service-card p {
+        color: rgba(42, 37, 32, 0.7);
+        margin-bottom: 1.5rem;
+      }
+
+      .service-features {
+        list-style: none;
+      }
+
+      .service-features li {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .service-features li:before {
+        content: "•";
+        color: #d4af37;
+        font-weight: bold;
+      }
+
+      /* Gallery Section */
+      .gallery {
+        padding: 6rem 0;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(42, 37, 32, 0.6), transparent);
+        display: flex;
+        align-items: flex-end;
+        padding: 2rem;
+      }
+
+      .gallery-overlay h3 {
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      /* Info Section */
+      .info {
+        padding: 6rem 0;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .info-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .info-item h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .info-item p {
+        color: rgba(42, 37, 32, 0.7);
+      }
+
+      /* Footer */
+      footer {
+        background: #2a2520;
+        color: #faf8f3;
+        padding: 3rem 0;
+        text-align: center;
+      }
+
+      footer h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #d4af37;
+      }
+
+      footer p {
+        color: rgba(250, 248, 243, 0.7);
+        font-size: 0.875rem;
+      }
+
+      .divider-line {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.3), transparent);
+        margin: 3rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <h1>강서 유흥 셔츠룸</h1>
+        <div style="display: flex; gap: 2rem;">
+          <a href="#about">소개</a>
+          <a href="#services">서비스</a>
+          <a href="#contact">연락처</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <span style="font-size: 0.875rem; letter-spacing: 0.1em; color: #d4af37; font-family: 'Montserrat', sans-serif; font-weight: 600;">PREMIUM EXPERIENCE</span>
+            </div>
+            <h2>럭셔리한<br />프리미엄<br />셔츠룸</h2>
+            <p>강서구의 가장 세련된 프리미엄 셔츠룸. 고급스러운 인테리어와 최고의 서비스로 특별한 밤을 만들어드립니다.</p>
+            <div class="button-group">
+              <button class="btn-primary" onclick="window.location.href='tel:010-3778-6425'">📞 예약 문의</button>
+              <button class="btn-secondary">시설 둘러보기</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/hero-luxury.png" alt="Luxury Room" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-line"></div>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h3>OUR SERVICES</h3>
+          <h2>프리미엄 서비스</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>VIP 룸</h3>
+            <p>최고급 인테리어와 프리미엄 음향 시스템을 갖춘 VIP 전용 룸</p>
+            <ul class="service-features">
+              <li>대리석 인테리어</li>
+              <li>크리스탈 샹들리에</li>
+              <li>프라이빗 바</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h3>프리미엄 매니저</h3>
+            <p>젊고 매혹적인 20대 매니저가 최고의 서비스를 제공합니다</p>
+            <ul class="service-features">
+              <li>매니저 20명 이상 항시 대기</li>
+              <li>친절한 서비스</li>
+              <li>프로페셔널</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h3>최신 음향</h3>
+            <p>최고급 음향 장비로 완벽한 사운드 경험을 제공합니다</p>
+            <ul class="service-features">
+              <li>4K 디스플레이</li>
+              <li>최신 곡 매일 업데이트</li>
+              <li>프로 음향 시스템</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h3>GALLERY</h3>
+          <h2>시설 소개</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="/vip-room-luxury.png" alt="VIP Room" />
+            <div class="gallery-overlay">
+              <h3>VIP 프리미엄 룸</h3>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/ambiance-luxury.png" alt="Party Ambiance" />
+            <div class="gallery-overlay">
+              <h3>럭셔리 파티 분위기</h3>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/entrance-luxury.png" alt="Entrance" />
+            <div class="gallery-overlay">
+              <h3>세련된 입구</h3>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/details-luxury.png" alt="Premium Details" />
+            <div class="gallery-overlay">
+              <h3>프리미엄 디테일</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-line"></div>
+
+    <!-- Info Section -->
+    <section class="info" id="contact">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-item">
+            <h3>📍 위치</h3>
+            <p>서울시 강서구청<br />강서구청 근처</p>
+          </div>
+          <div class="info-item">
+            <h3>🕐 운영시간</h3>
+            <p>24시간 운영<br />연중무휴</p>
+          </div>
+          <div class="info-item">
+            <h3>📞 연락처</h3>
+            <p>전화: 010-3778-6425<br />카카오톡: inhighg</p>
+          </div>
+        </div>
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(212, 175, 55, 0.2); text-align: center;">
+          <p style="color: rgba(42, 37, 32, 0.6); font-size: 0.875rem;">
+            전국 최저가 셔츠룸 | 최고의 가성비 | 프리미엄 서비스
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <h2>강서 유흥 셔츠룸</h2>
+        <p>럭셔리한 프리미엄 셔츠룸 경험</p>
+        <p style="margin-top: 2rem;">© 2026 강서 유흥 셔츠룸. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
