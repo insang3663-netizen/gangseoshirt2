@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="강서셔츠룸 & 가라오케 NO.1 - 마곡, 화곡, 발산역 최신 시스템. 강서유흥, 강서노래방, 강서시스템주점, 강서혼술, 강서회식장소, 강서밤문화 최고의 가성비 프리미엄 셔츠룸" />
+    <meta name="description" content="강서구 마곡, 발산 일대 최고의 셔츠룸. 프라이빗한 룸과 고품격 서비스, 성공적인 비즈니스 회식을 제안합니다." />
     <meta name="keywords" content="강서셔츠룸, 강서유흥, 강서가라오케, 강서노래방, 마곡셔츠룸, 발산역가라오케, 화곡동노래방, 강서구회식장소, 강서혼술, 강서시스템주점, 강서밤문화, 강서가성비술집" />
     <meta name="google-site-verification" content="_7EPRXMWCjaJe5WfqYNQJhpWI3KiwO4j96nEqWRcG3s" />
-    <title>강서셔츠룸 & 가라오케 NO.1 - 마곡/화곡 최신 시스템 안내 | 강서유흥</title>
+    <title>강서구 셔츠룸 - 마곡 발산역 No.1 비즈니스 회식 장소</title>
     <meta property="og:title" content="강서셔츠룸 & 가라오케 NO.1 - 마곡/화곡 최신 시스템" />
     <meta property="og:description" content="강서구 최고의 프리미엄 셔츠룸. 마곡, 화곡, 발산역 근처 최신 시스템 가라오케" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -100,7 +100,7 @@
         align-items: center;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         .hero-content {
           grid-template-columns: 1fr 1fr;
         }
@@ -108,332 +108,147 @@
 
       .hero-text h1 {
         font-size: 2.5rem;
-        line-height: 1.3;
+        line-height: 1.2;
         margin-bottom: 1.5rem;
-        color: #1a1410;
-        font-weight: 700;
-      }
-
-      @media (min-width: 768px) {
-        .hero-text h1 {
-          font-size: 3.5rem;
-        }
+        color: #2a2520;
       }
 
       .hero-text p {
-        font-size: 1.0625rem;
-        color: rgba(42, 37, 32, 0.8);
-        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 2rem;
         line-height: 1.8;
-        letter-spacing: 0.3px;
-      }
-
-      .button-group {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-
-      button, .btn {
-        padding: 0.85rem 1.75rem;
-        font-size: 1rem;
-        border: none;
-        border-radius: 0.65rem;
-        cursor: pointer;
-        transition: all 0.3s;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        letter-spacing: 0.3px;
-      }
-
-      .btn-primary {
-        background: #d4af37;
-        color: #1a1410;
-      }
-
-      .btn-primary:hover {
-        background: #c9a227;
-        transform: translateY(-2px);
-      }
-
-      .btn-secondary {
-        border: 1.5px solid #d4af37;
-        color: #d4af37;
-        background: transparent;
-      }
-
-      .btn-secondary:hover {
-        background: rgba(212, 175, 55, 0.1);
-        transform: translateY(-2px);
-      }
-
-      .hero-image {
-        position: relative;
       }
 
       .hero-image img {
         width: 100%;
-        height: 24rem;
-        object-fit: cover;
-        border-radius: 0.5rem;
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
       }
 
-      /* About Section - Image First */
-      .about-section {
-        padding: 4rem 0;
-      }
-
-      .about-section h2 {
-        font-size: 2.75rem;
-        margin-bottom: 2rem;
-        color: #1a1410;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-      }
-
-      /* Image Gallery Slider */
-      .image-gallery {
-        margin-bottom: 3rem;
-      }
-
-      .gallery-slider {
-        position: relative;
-        width: 100%;
-        border-radius: 0.75rem;
-        overflow: hidden;
-        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
-      }
-
-      .gallery-slide {
-        display: none;
-        width: 100%;
-      }
-
-      .gallery-slide.active {
-        display: block;
-      }
-
-      .gallery-slide img {
-        width: 100%;
-        height: 28rem;
-        object-fit: cover;
-      }
-
-      @media (max-width: 768px) {
-        .gallery-slide img {
-          height: 20rem;
-        }
-      }
-
-      .gallery-controls {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 1.5rem;
-      }
-
-      .gallery-dot {
-        width: 0.75rem;
-        height: 0.75rem;
-        border-radius: 50%;
-        background: rgba(212, 175, 55, 0.3);
-        cursor: pointer;
-        transition: all 0.3s;
-      }
-
-      .gallery-dot.active {
+      /* Button Styles */
+      .btn-primary {
         background: #d4af37;
-        width: 2rem;
-        border-radius: 0.375rem;
-      }
-
-      .gallery-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.3);
-        color: white;
+        color: #2a2520;
+        padding: 1rem 2.5rem;
         border: none;
-        padding: 1rem;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 700;
         cursor: pointer;
-        font-size: 1.5rem;
         transition: all 0.3s;
-        z-index: 10;
       }
 
-      .gallery-nav:hover {
-        background: rgba(0, 0, 0, 0.5);
+      .btn-primary:hover {
+        background: #e0c158;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
       }
 
-      .gallery-prev {
-        left: 1rem;
-      }
-
-      .gallery-next {
-        right: 1rem;
-      }
-
-      /* Quick Info Box */
-      .quick-info {
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
-        border: 2px solid #d4af37;
-        padding: 2rem;
-        border-radius: 0.75rem;
-        margin-bottom: 3rem;
-        text-align: center;
-      }
-
-      .quick-info h3 {
-        font-size: 1.75rem;
-        color: #d4af37;
-        margin-bottom: 1.5rem;
-        font-weight: 700;
-      }
-
-      .info-row {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      @media (min-width: 768px) {
-        .info-row {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      .info-item {
-        text-align: center;
-      }
-
-      .info-label {
-        font-size: 0.95rem;
-        color: rgba(42, 37, 32, 0.6);
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-      }
-
-      .info-value {
-        font-size: 1.5rem;
-        color: #d4af37;
-        font-weight: 700;
-      }
-
-      /* Services Section */
-      .services {
-        padding: 6rem 0;
-        background: rgba(255, 255, 255, 0.5);
-      }
-
+      /* Section Styles */
       .section-header {
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
       }
 
       .section-header h2 {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #2a2520;
       }
 
       .divider {
-        width: 4rem;
-        height: 0.25rem;
+        width: 60px;
+        height: 3px;
         background: #d4af37;
         margin: 0 auto;
       }
 
+      .divider-line {
+        width: 100%;
+        height: 1px;
+        background: rgba(212, 175, 55, 0.2);
+        margin: 3rem 0;
+      }
+
+      /* Services Section */
+      .services {
+        padding: 4rem 0;
+        background: #faf8f3;
+      }
+
       .services-grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
       }
 
-      @media (min-width: 768px) {
-        .services-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-
       .service-card {
-        padding: 2.5rem;
-        background: linear-gradient(to bottom right, #ffffff, #faf8f3);
-        border: 1px solid rgba(212, 175, 55, 0.2);
-        border-radius: 0.65rem;
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         transition: all 0.3s;
-        text-align: center;
       }
 
       .service-card:hover {
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        border-color: rgba(212, 175, 55, 0.5);
         transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       }
 
       .service-card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: #d4af37;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: #2a2520;
       }
 
       .service-card p {
-        color: rgba(42, 37, 32, 0.7);
+        color: #666;
         margin-bottom: 1.5rem;
-        font-size: 1rem;
+        font-size: 0.95rem;
       }
 
       .service-features {
         list-style: none;
+        padding: 0;
       }
 
       .service-features li {
-        font-size: 0.95rem;
-        margin-bottom: 0.6rem;
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-        color: rgba(42, 37, 32, 0.75);
+        padding: 0.5rem 0;
+        color: #555;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
       }
 
-      .service-features li:before {
-        content: "✓";
-        color: #d4af37;
-        font-weight: bold;
+      .service-features li:last-child {
+        border-bottom: none;
       }
 
       /* Gallery Section */
       .gallery {
-        padding: 6rem 0;
+        padding: 4rem 0;
+        background: #faf8f3;
       }
 
       .gallery-grid {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      @media (min-width: 768px) {
-        .gallery-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
       }
 
       .gallery-item {
         position: relative;
-        border-radius: 0.5rem;
         overflow: hidden;
-        cursor: pointer;
+        border-radius: 8px;
+        aspect-ratio: 1;
       }
 
       .gallery-item img {
         width: 100%;
-        height: 20rem;
+        height: 100%;
         object-fit: cover;
-        transition: transform 0.5s;
+        transition: transform 0.3s;
       }
 
       .gallery-item:hover img {
@@ -442,95 +257,112 @@
 
       .gallery-overlay {
         position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, rgba(42, 37, 32, 0.6), transparent);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
         display: flex;
         align-items: flex-end;
-        padding: 2rem;
+        padding: 1.5rem;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
       }
 
       .gallery-overlay h3 {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
 
       /* Info Section */
       .info {
-        padding: 6rem 0;
-        background: rgba(255, 255, 255, 0.5);
+        padding: 4rem 0;
+        background: #faf8f3;
       }
 
       .info-grid {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-        margin-bottom: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
       }
 
-      @media (min-width: 768px) {
-        .info-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
+      .info-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       }
 
       .info-item h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-bottom: 1rem;
         color: #d4af37;
-        font-weight: 700;
       }
 
       .info-item p {
-        color: rgba(42, 37, 32, 0.8);
-        font-size: 1.0625rem;
+        color: #555;
         line-height: 1.8;
+        font-size: 0.95rem;
       }
 
-      /* SEO Text Section */
+      .info-label {
+        font-weight: 700;
+        color: #d4af37;
+        margin-bottom: 0.5rem;
+      }
+
+      .info-value {
+        color: #2a2520;
+        font-size: 0.95rem;
+      }
+
+      /* SEO Content Section */
       .seo-content {
-        padding: 4rem 0;
-        background: #f5f3ed;
-        margin-top: 4rem;
+        background: white;
+        padding: 2.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        margin-top: 2rem;
       }
 
       .seo-content h3 {
-        font-size: 1.25rem;
-        margin-bottom: 2rem;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
         color: #2a2520;
-        font-weight: 700;
       }
 
       .accordion {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
       }
 
       .accordion-header {
-        background: linear-gradient(to right, rgba(212, 175, 55, 0.08), transparent);
-        border-left: 3px solid #d4af37;
-        padding: 1.25rem;
+        padding: 1rem 0;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-radius: 0.35rem;
         transition: all 0.3s;
       }
 
       .accordion-header:hover {
-        background: linear-gradient(to right, rgba(212, 175, 55, 0.12), transparent);
+        color: #d4af37;
       }
 
       .accordion-header h4 {
         font-size: 1rem;
         color: #2a2520;
         margin: 0;
-        font-weight: 600;
       }
 
       .accordion-toggle {
-        font-size: 1.25rem;
         color: #d4af37;
+        font-weight: 700;
         transition: transform 0.3s;
       }
 
@@ -539,22 +371,21 @@
       }
 
       .accordion-content {
-        display: none;
-        padding: 1.5rem;
-        background: #ffffff;
-        border-left: 3px solid rgba(212, 175, 55, 0.3);
-        margin-left: 0;
-        font-size: 0.9375rem;
-        color: rgba(42, 37, 32, 0.75);
-        line-height: 1.7;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
       }
 
       .accordion-content.open {
-        display: block;
+        max-height: 1000px;
+        transition: max-height 0.3s ease-in;
       }
 
       .accordion-content p {
+        color: #555;
         margin-bottom: 1rem;
+        line-height: 1.8;
+        font-size: 0.95rem;
       }
 
       .accordion-content p:last-child {
@@ -564,9 +395,13 @@
       /* Footer */
       footer {
         background: #2a2520;
-        color: #faf8f3;
-        padding: 3rem 0;
+        color: #e8e6e1;
+        padding: 3rem 0 1rem;
         text-align: center;
+      }
+
+      footer .container {
+        margin-bottom: 2rem;
       }
 
       footer h2 {
@@ -576,43 +411,24 @@
       }
 
       footer p {
-        color: rgba(250, 248, 243, 0.7);
-        font-size: 0.875rem;
+        color: #aaa;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
       }
 
-      .divider-line {
-        height: 1px;
-        background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.3), transparent);
-        margin: 3rem 0;
-      }
-
-      .cta-button {
-        display: inline-block;
-        margin: 2rem 0;
-      }
-
-      /* Mobile Optimization */
-      @media (max-width: 640px) {
+      /* Responsive */
+      @media (max-width: 768px) {
         .hero-text h1 {
-          font-size: 2rem;
+          font-size: 1.8rem;
         }
 
-        .about-section h2 {
-          font-size: 2rem;
+        .section-header h2 {
+          font-size: 1.5rem;
         }
 
         nav a {
           margin-left: 1rem;
-          font-size: 0.8rem;
-        }
-
-        .quick-info {
-          padding: 1.5rem;
-        }
-
-        .gallery-nav {
-          padding: 0.75rem;
-          font-size: 1.25rem;
+          font-size: 0.85rem;
         }
       }
     </style>
@@ -622,10 +438,10 @@
     <nav>
       <div class="container">
         <h1>강서셔츠룸</h1>
-        <div style="display: flex; gap: 2rem;">
-          <a href="#about">소개</a>
+        <div style="display: flex; gap: 1rem;">
           <a href="#services">서비스</a>
           <a href="#location">위치</a>
+          <a href="tel:010-3778-6425">예약</a>
         </div>
       </div>
     </nav>
@@ -635,78 +451,41 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1>강서셔츠룸 & 가라오케 NO.1</h1>
-            <p>마곡·화곡·발산역 최신 시스템 프리미엄 셔츠룸</p>
-            <p style="font-size: 1rem; color: rgba(42, 37, 32, 0.7);">강서유흥, 강서노래방, 강서가라오케의 최고봉. 최신 음향 시스템과 프리미엄 서비스로 특별한 밤을 만들어드립니다.</p>
-            <div class="button-group">
-              <button class="btn-primary" onclick="window.location.href='tel:010-3778-6425'">📞 예약 문의</button>
-              <button class="btn-secondary" onclick="document.getElementById('location').scrollIntoView({behavior: 'smooth'})">📍 위치 확인</button>
-            </div>
+            <h1>강서 No.1 프리미엄 셔츠룸</h1>
+            <p>마곡, 화곡, 발산역 인근에서 가장 럭셔리한 시설과 서비스를 제공합니다. 비즈니스 회식부터 친구들과의 모임까지, 모든 순간을 특별하게 만들어드립니다.</p>
+            <button class="btn-primary" onclick="window.location.href='tel:010-3778-6425'">지금 바로 예약하기</button>
           </div>
           <div class="hero-image">
-            <img src="/hero-luxury.png" alt="강서셔츠룸 프리미엄 인테리어" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-line"></div>
-
-    <!-- About Section - Image First -->
-    <section class="about-section" id="about">
-      <div class="container">
-        <h2>강서셔츠룸 시설 소개</h2>
-
-        <!-- Image Gallery Slider -->
-        <div class="image-gallery">
-          <div class="gallery-slider">
-            <div class="gallery-slide active">
-              <img src="/vip-room-luxury.png" alt="강서셔츠룸 VIP 프리미엄 룸" />
-            </div>
-            <div class="gallery-slide">
-              <img src="/ambiance-luxury.png" alt="강서가라오케 럭셔리 파티 분위기" />
-            </div>
-            <div class="gallery-slide">
-              <img src="/entrance-luxury.png" alt="강서노래방 세련된 입구" />
-            </div>
-            <div class="gallery-slide">
-              <img src="/details-luxury.png" alt="강서유흥 프리미엄 디테일" />
-            </div>
-            <button class="gallery-nav gallery-prev" onclick="changeSlide(-1)">❮</button>
-            <button class="gallery-nav gallery-next" onclick="changeSlide(1)">❯</button>
-          </div>
-          <div class="gallery-controls">
-            <span class="gallery-dot active" onclick="goToSlide(0)"></span>
-            <span class="gallery-dot" onclick="goToSlide(1)"></span>
-            <span class="gallery-dot" onclick="goToSlide(2)"></span>
-            <span class="gallery-dot" onclick="goToSlide(3)"></span>
+            <img src="/hero-luxury.png" alt="강서셔츠룸 럭셔리 인테리어" />
           </div>
         </div>
 
-        <!-- Quick Info Box -->
-        <div class="quick-info">
-          <h3>✨ 강서셔츠룸 정보</h3>
-          <div class="info-row">
-            <div class="info-item">
-              <div class="info-label">📞 예약 문의</div>
-              <div class="info-value">010-3778-6425</div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">💬 카카오톡</div>
-              <div class="info-value">inhighg</div>
-            </div>
+        <!-- Quick Info -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+          <div class="info-item">
+            <div class="info-label">🎤 최신 시스템</div>
+            <div class="info-value">4K 고화질 디스플레이</div>
           </div>
-          <div class="info-row">
-            <div class="info-item">
-              <div class="info-label">📍 위치</div>
-              <div class="info-value">강서구청 근처</div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">🕐 운영시간</div>
-              <div class="info-value">24시간 운영</div>
-            </div>
+          <div class="info-item">
+            <div class="info-label">👑 프리미엄 룸</div>
+            <div class="info-value">대리석 인테리어</div>
           </div>
-          <button class="btn-primary" onclick="window.location.href='tel:010-3778-6425'" style="margin-top: 1.5rem;">지금 바로 예약하기</button>
+          <div class="info-item">
+            <div class="info-label">💎 매니저 서비스</div>
+            <div class="info-value">20명 이상 항시 대기</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">📍 위치</div>
+            <div class="info-value">강서구청 근처</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">🕐 운영시간</div>
+            <div class="info-value">24시간 운영</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">📞 연락처</div>
+            <div class="info-value">010-3778-6425</div>
+          </div>
         </div>
 
         <!-- SEO Content Section (Collapsed) -->
@@ -843,6 +622,34 @@
             <div class="gallery-overlay">
               <h3>프리미엄 디테일</h3>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-line"></div>
+
+    <!-- Business Meeting Guide Section -->
+    <section style="background: #faf8f3; padding: 4rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <h2>강서구 회식 및 비즈니스 미팅 가이드</h2>
+          <div class="divider"></div>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; line-height: 1.9; color: #2a2520;">
+          <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
+            강서구 마곡과 발산역 인근에서 품격 있는 회식 장소를 찾으신다면 저희 셔츠룸을 추천합니다. 저희는 단순한 유흥 공간을 넘어 성공적인 비즈니스 파트너십을 위한 프라이빗한 공간을 제공합니다.
+          </p>
+          
+          <div style="background: rgba(212, 175, 55, 0.08); padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem;">
+            <h3 style="color: #d4af37; margin-bottom: 1rem; font-size: 1.1rem;">📍 위치</h3>
+            <p style="margin-bottom: 1rem;">마곡 및 발산역 인근 (강서구 전 지역 픽업 지원 가능)</p>
+            
+            <h3 style="color: #d4af37; margin-bottom: 1rem; font-size: 1.1rem; margin-top: 1.5rem;">💼 시스템</h3>
+            <p style="margin-bottom: 1rem;">정찰제 시스템으로 투명한 가격과 최상의 의전 서비스를 약속드립니다.</p>
+            
+            <h3 style="color: #d4af37; margin-bottom: 1rem; font-size: 1.1rem; margin-top: 1.5rem;">📅 예약</h3>
+            <p>24시간 실시간 예약 및 시스템 문의가 가능하며, 단체 회식 시 미리 연락 주시면 최적의 룸을 세팅해 드립니다.</p>
           </div>
         </div>
       </div>
